@@ -47,13 +47,14 @@ describe PagesController do
                 @base_title+" | About")
     end
   end 
-
+  #test for the existence of "help"
   describe "GET 'help'" do
     it "should be successful" do
       get 'help'
       response.should be_success
     end
-    
+
+  #test for the right title  
     it "should have the right title" do
       get 'help'
       response.should have_selector("title",
